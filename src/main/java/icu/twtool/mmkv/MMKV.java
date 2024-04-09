@@ -98,6 +98,9 @@ public class MMKV {
     public long decodeLong(String key) {
         return decodeLong(handle, key, 0L);
     }
+    public long decodeLong(String key, Long defaultValue) {
+        return decodeLong(handle, key, defaultValue);
+    }
     public float decodeFloat(String key) {
         return decodeFloat(handle, key, 0f);
     }

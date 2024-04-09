@@ -57,6 +57,7 @@ class MMKVTest {
         String key = "test.long";
         mmkv.removeValueForKey(key);
         assertFalse(mmkv.containsKey(key));
+        assertEquals(-1L, mmkv.decodeLong(key, -1L));
         assertEquals(0L, mmkv.decodeLong(key));
 
         assertTrue(mmkv.encode(key, 1L));
